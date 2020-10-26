@@ -1,0 +1,44 @@
+body {
+  background-color: #eaeaea;
+}
+
+.quoteCard {
+  width: 40vw;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  padding: 1.5rem;
+}
+
+.cardCharacterName {
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 2px;
+  padding-top: 1.5rem;
+}
+
+.quoteImage {
+  width: 30%;
+}
+
+.btnNewQuote {
+  background-color: indigo;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 0;
+  font-weight: 700;
+}
+
+.btnNewQuote:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+  border: 0;
+}
+
+.btnNewQuote:visited {
+  border: 0;
+}
