@@ -44,30 +44,26 @@
     ></script>
     <script>
       function fetchSimpsonsJSON() {
-  const url = `https://simpsons-quotes-api.herokuapp.com/quotes`;
-  axios.get(url)
-    .then(function(response) {
-      return response.data; 
-    })
-    .then(function(simpsons) {
-      console.log('data decoded from JSON:', simpsons);
+        const url = `https://simpsons-quotes-api.herokuapp.com/quotes`;
+        axios.get(url)
+          .then(function(response) {
+            return response.data; 
+          })
+          .then(function(simpsons) {
+            console.log('data decoded from JSON:', simpsons);
 
-      const simpsonsHtml = `
-        <img src="${simpsons[0].image}" />
-        <p><strong>${simpsons[0].character}</strong></p>
-        <p>${simpsons[0].quote}</p>
-      `;
-      document.querySelector('#simpsons').innerHTML = simpsonsHtml;
-      document.getElementById('btnReload').addEventListener("click", function (){
-        location.reload(true)
-      });
-
-      
-
+          const simpsonsHtml = `
+            <img src="${simpsons[0].image}" />
+            <p><strong>${simpsons[0].character}</strong></p>
+            <p>${simpsons[0].quote}</p>
+          `;
+          document.querySelector('#simpsons').innerHTML = simpsonsHtml;
     });
 }
-
 fetchSimpsonsJSON();
+document.getElementById('btnReload').addEventListener("click", function (){
+  fetchSimpsonsJSON()
+});
     </script>
   </body>
 </html>
