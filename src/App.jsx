@@ -1,7 +1,7 @@
 import './App.css';
 import QuoteCard from './components/QuoteCard';
 import axios from 'axios';
-import {Component} from 'react';
+import React, {Component} from 'react';
 
 const oneSimpsonQuote = [
   {
